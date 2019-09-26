@@ -1,6 +1,7 @@
 public class Glass extends Container {
     Glass(double capacity) {
        setCapacity(capacity);
+       setQuantity(250);
     }
 
     public void setCapacity(double capacity) {
@@ -13,7 +14,7 @@ public class Glass extends Container {
 
     public void status()
     {
-        System.out.printf("\nCapacity of glass = %.2f ml\n",getCapacity());
-        System.out.printf("Glass is filled  by %.2f ml\nYou can fill the glass by %.2f ml.\n",getQuantity(),getCapacity()-getQuantity());
+        System.out.printf("Capacity of glass = %.2f ml\n",getCapacity());
+        System.out.printf("You can drink %.2f ml\nYou can fill the glass by %.2f ml.\n\n",getQuantity(),getCapacity()-getQuantity());
     }
 }

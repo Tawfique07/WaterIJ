@@ -15,14 +15,24 @@ public class Human {
         jug.pour(glass,quantity);
     }
     void fillJug(Jug jug,double quantity) {
+
         jug.fill(quantity);
+        System.out.println("Jug filled Successfully!\n");
     }
-    void drink(Glass glass,double quantity) {
-        double temp = glass.getQuantity();
-        glass.setQuantity(temp-quantity);
-        drink++;
+    boolean drink(Glass glass,double quantity) {
+        if(glass.getQuantity()>=quantity){
+            double temp = glass.getQuantity();
+            glass.setQuantity(temp-quantity);
+            drink++;
+            return true;
+        }
+       else {
+           System.out.println("Glass doesn't have enough Water You have required\n"+
+                   "Please try with different amount! or fill the glass!\n");
+           return false;
+        }
     }
     void status() {
-        System.out.printf("%s Drinks water %d Times\n",name,drink);
+        System.out.printf("%s, You have Drunk water %d Times\nHave a Good day!\n",name,drink);
     }
 }
