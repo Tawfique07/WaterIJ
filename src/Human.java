@@ -11,9 +11,6 @@ public class Human {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
     void fillGlass(Glass glass, Jug jug, double quantity) {
         jug.pour(glass,quantity);
     }
